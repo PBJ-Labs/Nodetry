@@ -20,6 +20,12 @@ public:
    virtual void GetPlane(Plane& plane) = 0;
    virtual bool InvertPlane(Plane& plane) = 0;
 
+   Plane* Allocate_Plane();
+
+   virtual void FreePlane(Plane* plane) = 0;
+
+   bool SelectPlane(Plane& plane);
+
 }
 
 #endif
