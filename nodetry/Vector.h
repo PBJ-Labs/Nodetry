@@ -8,12 +8,12 @@ using Vector6 = float[6];
 
 template<typename T>
 T AddVectors( T va, T vb, T vc ){
-  return T(va + vb + vc);
+   return T(va + vb + vc);
 }
 
 template<typename T>
 T ReturnVector(T v){
-  return v;
+   return T(v);
 }
 
 #endif
