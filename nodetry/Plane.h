@@ -25,7 +25,9 @@ template<typename Plane3>
 const Plane3 IteratePlaneNormal(Plane3& plane, const Plane3& Normal)const {
    typedef std::set<Normal&> IterateNormal;
          for( int i = 0; i >= 0; i++ ){
-              IterateNormal.begin(); IterateNormal.end();
+              IterateNormal.begin(); 
+              IterateNormal.insert(plane);
+              IterateNormal.end();
          }
  return plane;
 };
