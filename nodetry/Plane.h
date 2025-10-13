@@ -16,16 +16,18 @@ public:
 
    Vector3 origin = { 0.0f, 0.0f, 0.0f };
 
-   virtual void ConstructPlane(Plane* plane, Vector3 a, Vector3 b, Vector3 c, bool bInvert) = 0;
-   virtual void GetPlane(Plane& plane) = 0;
-   virtual bool InvertPlane(Plane& plane) = 0;
+template<typename Plane3>
+const Plane3 ReturnPlane(Plane3 plane)const {
+   return plane;
+};
 
-   Plane* Allocate_Plane();
-
-   virtual void FreePlane(Plane* plane) = 0;
-
-   bool SelectPlane(Plane& plane);
-
-}
+template<typename Plane3>
+const Plane3 IteratePlaneNormal(Plane3& plane, const Plane3& Normal)const {
+   typedef std::set<Normal&> IterateNormal;
+         for( int i = 0; i >= 0; i++ ){
+              IterateNormal.begin(); IterateNormal.end();
+         }
+ return plane;
+};
 
 #endif
